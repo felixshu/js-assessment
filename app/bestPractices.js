@@ -7,32 +7,30 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
  */
 define(function() {
   return {
-
     globals : function() {
-      var myObject = {
-        name: 'Jory'
+      myObject = {
+        name : 'Jory'
       };
 
       return myObject;
     },
 
     functions : function(flag) {
-      var getValue;
       if (flag) {
-        getValue = function getValue() { return 'a'; }
+        function getValue() { return 'a'; }
       } else {
-        getValue = function getValue() { return 'b'; }
+        function getValue() { return 'b'; }
       }
 
       return getValue();
     },
 
     parseInt : function(num) {
-      return parseInt(num, 10);
+      return parseInt(num);
     },
 
     identity : function(val1, val2) {
-      return val1 === val2
+
     }
   };
 });
